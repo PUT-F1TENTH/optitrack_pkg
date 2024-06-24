@@ -71,88 +71,12 @@ install(DIRECTORY include/
   DESTINATION include/
 )
 
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_export_include_directories(include)
 ament_export_libraries(${library_name})
 ament_export_dependencies(${dependencies})
 
 ament_package()
-
-
-# cmake_minimum_required(VERSION 3.5)
-# project(optitrack)
-
-
-
-# if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-#   add_compile_options(-Wall -Wextra -Wpedantic)
-# endif()
-
-# # find dependencies
-# find_package(ament_cmake_auto REQUIRED)
-# find_package(ament_cmake REQUIRED)
-# find_package(rclcpp REQUIRED)
-# find_package(std_msgs REQUIRED)
-# find_package(geometry_msgs REQUIRED)
-# find_package(Boost REQUIRED COMPONENTS thread system program_options filesystem)
-# find_package(eigen3 REQUIRED)
-
-# ## Specify include directories
-# include_directories(
-#   include
-#   ${catkin_INCLUDE_DIRS}
-#   ${Boost_INCLUDE_DIRS}
-#   ${eigen3_INCLUDE_DIR}
-#   ${std_msgs_INCLUDE_DIRS}
-# )
-
-
-# ## Create an executable
-# add_executable(optitrack_node_executable
-#   ./src/Mocap.cpp
-#   ./src/optitrack_node.cpp
-# )
-
-# ## Link the libraries
-# ament_target_dependencies(optitrack_node_executable
-#   rclcpp
-#   std_msgs
-#   geometry_msgs
-#   Boost
-#   Eigen3
-# )
-
-# ## Add message files
-# rosidl_generate_interfaces(${PROJECT_NAME}
-#   "msg/Marker.msg"
-#   "msg/RigidBody.msg"
-#   DEPENDENCIES std_msgs geometry_msgs
-# )
-
-# target_link_libraries(optitrack_node_executable
-#   ${Boost_LIBRARIES}
-#   ${catkin_LIBRARIES}
-# )
-
-# ## Install the executable
-# install(TARGETS optitrack_node_executable
-#   DESTINATION lib/${PROJECT_NAME}
-# )
-
-# ## Install the launch file
-# install(DIRECTORY launch
-#   DESTINATION share/${PROJECT_NAME}
-# )
-
-# ament_export_include_directories(include)
-# ament_export_dependencies(ament_cmake)
-# ament_export_dependencies(rclcpp)
-# ament_export_dependencies(std_msgs)
-# ament_export_dependencies(geometry_msgs)
-# ament_export_dependencies(Boost)
-# ament_export_dependencies(Eigen3)
-# ament_export_libraries(optitrack_node_executable)
-
-
-# ament_package()
-
-
