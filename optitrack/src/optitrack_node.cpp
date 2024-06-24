@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
 
     std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(node);
 
-    std::string localAddress = "192.168.2.2";
-    std::string serverAddress = "192.168.2.34";
+    std::string localAddress = "192.168.0.215";
+    std::string serverAddress = "192.168.0.220";
 
     // if(!node->get_parameter("local_address", localAddress)){
     //     RCLCPP_ERROR(node->get_logger(), "Could not read local_address from parameters");
