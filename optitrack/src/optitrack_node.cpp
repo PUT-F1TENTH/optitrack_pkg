@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
         rbOdomPubs.push_back(node->create_publisher<nav_msgs::msg::Odometry>("optitrack/odom", 10));
         seqs.push_back(0);
     }
-    rclcpp::Rate loop_rate(360);
+    rclcpp::Rate loop_rate(100);
     
     
     int count = 0;
